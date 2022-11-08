@@ -1,5 +1,5 @@
 import React, {FC, useMemo} from 'react';
-import {ImageBackground, Pressable, Text, View} from 'react-native';
+import {ImageBackground, Pressable, Text, TextInput, View} from 'react-native';
 import {NavigationProp, ParamListBase} from '@react-navigation/native';
 import createStyles from './style';
 import {SIGN_IN} from '../../assets';
@@ -13,9 +13,22 @@ const SigninScreen: FC<IProps> = ({navigation}) => {
   const styles = useMemo(() => createStyles(), []);
   return (
     <View style={styles.body}>
-      <Text style={styles.text}>SigninScreen</Text>
-      <ImageBackground source={SIGN_IN} style={styles.background} >
-        <Text> Sign-in to get started</Text>
+      {/* <Text style={styles.text}>SigninScreen</Text> */}
+      <ImageBackground source={SIGN_IN} style={styles.background} />
+      <>
+      <View>
+        
+      </View>
+        <Text style={styles.textMain}>
+          {'Add details to setup your account'}
+        </Text>
+        <View>
+
+        <TextInput
+          style={{color: 'red', borderColor: 'yellow', borderBottomWidth: 2 , padding: 2}}
+          />
+          </View>
+        <Text style={styles.textMain}> Sign-in to get started</Text>
         <View>
           <Button
             title="Sign-in"
@@ -26,7 +39,7 @@ const SigninScreen: FC<IProps> = ({navigation}) => {
             <Text>Or Sign-up</Text>
           </Pressable>
         </View>
-      </ImageBackground>
+      </>
     </View>
   );
 };
