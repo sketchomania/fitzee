@@ -1,5 +1,7 @@
 # Fitzee
 
+A React Native TypeScript App
+
 ## Note
 
 ## Figma
